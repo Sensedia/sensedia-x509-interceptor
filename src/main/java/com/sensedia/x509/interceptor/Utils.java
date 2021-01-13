@@ -18,7 +18,7 @@ import com.sensedia.interceptor.externaljar.dto.ApiCallData;
 
 /**
  * 
- * This provides utility methods for handling x509 certificates.
+ * This class provides utility methods for handling x509 certificates.
  * 
  * @author Mario Mancuso
  * 
@@ -27,7 +27,7 @@ import com.sensedia.interceptor.externaljar.dto.ApiCallData;
 public class Utils {
 	
 	/*
-	 * Decodes x509 client certs from the x-forwarded-client-cert header of an api call.
+	 * Decodes client's x509 certificate from the x-forwarded-client-cert header of an api call.
 	 */
 	@InterceptorMethod
 	public void decodeCerts(ApiCallData call) throws Exception {
@@ -38,9 +38,9 @@ public class Utils {
 		JSONObject clintCert = new JSONObject(clientCertMap);
 		
 		/*
-		 * Set the client certificate content on request body to be use on api flow.
+		 * Set the client's certificate content on request body to be use on api flow.
 		 * This is only an example of use case, the certificate information can be used
-		 * for others cases, e.g.: set in a header, response body, conten variable, etc.
+		 * for others cases, e.g.: set in a header, response body, content variable, etc.
 		 */
 		call.request.getBody().setString(clintCert.toString(), StandardCharsets.UTF_8.name());
 

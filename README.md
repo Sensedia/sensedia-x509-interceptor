@@ -2,7 +2,7 @@
 
 This interceptor help us to extract and manipulate information about x509 certificates when it is used in a mTLS connection.
 
-Since API Platform 4.3.4.0, in scenarios of use mTLS inbound address, we can obatain information about the x509 certificate client through x-forwarded-client-cert header in all requests (it is true if the handshake TLS is successfully completed). The following keys are supported by x-forwarded-client-cert:
+Since API Platform 4.3.4.0, in scenarios of use mTLS inbound address, we can obatain information about the client's x509 certificate through x-forwarded-client-cert header in all requests (it is true if the handshake TLS is successfully completed). The following keys are supported by x-forwarded-client-cert:
 
 * <span style="color:orange;">By</span>: The Subject Alternative Name (URI type) of the current client certificate.
 * <span style="color:orange;">Hash</span>: The SHA 256 digest of the current client certificate.
