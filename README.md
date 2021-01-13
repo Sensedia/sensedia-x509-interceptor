@@ -27,9 +27,7 @@ The x509 interceptor extracts all the information from the x-forwarded-client-ce
 
 # Prerequisites for using it in an API
 
-For the correct operation of the interceptor it need to be used in a mTLS scenario on api request flow as image below:
-
-<img src=”/src/main/resources/x509-interceptor-request-flow.png”>
+For the correct operation of the interceptor it need to be used in a mTLS scenario on api request flow.
 
 # Prerequisites for edit it
 
